@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aethelgard: Crônicas do Abismo (Site Oficial Fictício)</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #0b0d17;
+      color: #e2e8f0;
+      line-height: 1.6;
+    }
+
+    /* Cabeçalho */
+    header {
+      background-color: #13172a;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #3b82f6;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #60a5fa;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: #cbd5e1;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #60a5fa;
+    }
+
+    /* Banner Principal (Hero) */
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      background: radial-gradient(circle at center, #1e293b 0%, #0b0d17 100%);
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+      color: #ffffff;
+      margin-bottom: 15px;
+      text-shadow: 0 0 15px rgba(96, 165, 250, 0.5);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 650px;
+      margin: 0 auto 30px;
+      color: #94a3b8;
+    }
+
+    .btn-jogar {
+      background-color: #3b82f6;
+      color: white;
+      border: none;
+      padding: 15px 35px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .btn-jogar:hover {
+      background-color: #2563eb;
+      transform: scale(1.05);
+    }
+
+    /* Seções */
+    section {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #60a5fa;
+      margin-bottom: 25px;
+      border-left: 4px solid #3b82f6;
+      padding-left: 15px;
+    }
+
+    /* Cards de Personagens */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #13172a;
+      padding: 25px;
+      border-radius: 10px;
+      border: 1px solid #1e293b;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #3b82f6;
+    }
+
+    .card h3 {
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    .tag {
+      display: inline-block;
+      background-color: #1e3a8a;
+      color: #93c5fd;
+      font-size: 0.8rem;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+
+    /* Tabela de Requisitos */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #13172a;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: left;
+      border-bottom: 1px solid #1e293b;
+    }
+
+    th {
+      background-color: #1e293b;
+      color: #60a5fa;
+    }
+
+    /* Rodapé */
+    footer {
+      text-align: center;
+      padding: 30px;
+      background-color: #070910;
+      color: #64748b;
+      font-size: 0.9rem;
+      margin-top: 80px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">AETHELGARD</div>
+    <nav>
+      <a href="#sobre">O Jogo</a>
+      <a href="#classes">Classes</a>
+      <a href="#requisitos">Requisitos</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>Aethelgard: Crônicas do Abismo</h1>
+    <p>Explore ilhas flutuantes, domine magias antigas e enfrente titãs mecânicos neste RPG de ação em mundo aberto totalmente fictício.</p>
+    <button class="btn-jogar" onclick="simularDownload()">Baixar Demo Gratuita (v0.9 Beta)</button>
+    <p id="status-msg" style="margin-top: 15px; color: #34d399; font-weight: bold;"></p>
+  </div>
+
+  <section id="sobre">
+    <h2>Sobre o Universo</h2>
+    <p>Há mil anos, o continente de Aethelgard se fragmentou após a Queda do Cristal Solar. Hoje, os sobreviventes viajam entre arquipélagos aéreos usando dirigíveis movidos a éter. Escolha sua aliança e descubra o que despertou nas profundezas das nuvens.</p>
+  </section>
+
+  <section id="classes">
+    <h2>Classes Jogáveis</h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag">Combate Corpo a Corpo</span>
+        <h3>Guardião do Éter</h3>
+        <p>Usa armaduras pesadas reforçadas com cristais e martelos gravitacionais para proteger aliados na linha de frente.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Magia & Controle</span>
+        <h3>Tecelã de Tempestades</h3>
+        <p>Manipula ventos e relâmpagos à distância, controlando o campo de batalha com agilidade aérea.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Furtividade & Tecnologia</span>
+        <h3>Engenheiro das Sombras</h3>
+        <p>Especialista em dispositivos mecânicos, drones de reconhecimento e ataques rápidos com lâminas duplas.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="requisitos">
+    <h2>Requisitos do Sistema (Fictícios)</h2>
+    <table>
+      <tr>
+        <th>Componente</th>
+        <th>Mínimo</th>
+        <th>Recomendado</th>
+      </tr>
+      <tr>
+        <td>Sistema Operacional</td>
+        <td>Windows 10 (64-bit)</td>
+        <td>Windows 11 (64-bit)</td>
+      </tr>
+      <tr>
+        <td>Processador</td>
+        <td>Quad-Core 2.8 GHz</td>
+        <td>Octa-Core 3.6 GHz</td>
+      </tr>
+      <tr>
+        <td>Memória RAM</td>
+        <td>8 GB</td>
+        <td>16 GB</td>
+      </tr>
+      <tr>
+        <td>Armazenamento</td>
+        <td>45 GB livres</td>
+        <td>45 GB SSD</td>
+      </tr>
+    </table>
+  </section>
+
+  <footer>
+    <p>Este é um projeto de site fictício criado apenas para fins de demonstração e estudo. Nenhum jogo real está disponível para download.</p>
+  </footer>
+
+  <script>
+    function simularDownload() {
+      const msg = document.getElementById('status-msg');
+      msg.textContent = "⏳ Iniciando download fictício de 'Aethelgard_Setup_Ficticio.exe' (0 MB)...";
+      setTimeout(() => {
+        msg.textContent = "✅ Simulação concluída! Este é apenas um site demonstrativo.";
+      }, 2500);
+    }
+  </script>
+
+</body>
+</html>
